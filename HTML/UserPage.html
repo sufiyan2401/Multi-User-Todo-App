@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+<style>
+    * {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.main {
+  width: 500px;
+  padding: 10px;
+  margin: auto;
+}
+input {
+  padding: 10px;
+  margin: 5px;
+  font-size: 1em;
+}
+.btn {
+  background-color: rgb(221, 237, 100);
+  color: rgb(0, 0, 0);
+  border: none;
+  transition:0.8s ease ;
+  cursor: pointer;
+}
+li {
+  padding: 10px;
+  margin-bottom: 5px;
+  border-bottom: 1.5px solid rgb(178, 26, 26);
+}
+.text {
+  color: rgb(120, 23, 217);
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.label {
+  font-size: 0.7em;
+  color: grey;
+}
+#del{
+  background-color:rgb(221, 255, 127);
+  margin-top: 1.8rem;
+    padding: 10px 0;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    width: 50%;
+    transition:0.8s ease ;
+  }
+  #edit{
+    background-color:rgb(221, 255, 127);
+    margin-top: 1.8rem;
+    padding: 10px 0;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    width: 50%;
+    transition:0.8s ease ;
+}
+#edit:hover{
+  background-color:cornflowerblue;
+}
+#del:hover{
+  background-color: cornflowerblue;
+}
+#logo:hover{
+        background-color: hotpink;
+}
+#sibtn:hover{
+      background-color: cornflowerblue;
+}
+</style>
+<body>
+  
+      <div style="text-align: right">
+          <input type="button" value="logout" class="btn"  onclick="logout()" id="logo">
+      </div>
+      <div class="main">
+          <h1>Hello <span id="user"> </span> <span class="text">Send Your Data !</span></h1>
+      </div>
+      <div class="main">
+          <form action="#">
+              <div>
+                  <input type="text" id="Name" placeholder="Name" >
+                  <br>
+                  <input type="text" id="Description" placeholder="Description">
+                  <br>
+                  <input type="text" id="Status" placeholder="Status">
+                  <br>
+                  <input type="submit" value="Add" class="btn" onclick="sendtodo()" id="sibtn">
+                  <input type="submit" value="Get data" class="btn" onclick="getdata()" id="sibtn">
+              </div>
+          </form>
+      </div>
+      <div id="main">
+          <ul id="parent"></ul>
+      </div>
+</body>
+<script src="/JAVASCRIPT/user.js" type="module"></script>
+</html>
